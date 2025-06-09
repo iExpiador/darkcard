@@ -65,7 +65,7 @@ body {
   height: 80px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid #636363;
+  border: 2px solid #FFFFFF;
 }
 
 .info-text h2 {
@@ -99,7 +99,7 @@ body {
 }
 
 .btn {
-  background: #636363;
+  background: #636362;
   border: none;
   padding: 10px;
   color: #fff;
@@ -110,7 +110,7 @@ body {
 }
 
 .btn:hover {
-  background: #ff85c1;
+  background: #988496;
 }
 
 .player iframe {
