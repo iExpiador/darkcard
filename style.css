@@ -1,4 +1,4 @@
-/* style.css */
+/* Estilos CSS */
 
 body {
   margin: 0;
@@ -60,6 +60,8 @@ body {
   gap: 15px;
 }
 
+/* Icon y borde */
+
 .avatar {
   width: 80px;
   height: 80px;
@@ -67,6 +69,8 @@ body {
   object-fit: cover;
   border: 2px solid #FFFFFF;
 }
+
+/* Textos */
 
 .info-text h2 {
   margin: 0;
@@ -91,6 +95,8 @@ body {
   text-decoration: none;
 }
 
+/* Botón y Efecto */
+
 .buttons {
   display: flex;
   flex-direction: column;
@@ -113,11 +119,14 @@ body {
   background: #988496;
 }
 
+/* Reproductor Oculto */
+
 .player iframe {
   display: none;
 }
 
-/* Responsive */
+/* Adaptable */
+
 @media (max-width: 480px) {
   .profile-card {
     padding: 15px;
