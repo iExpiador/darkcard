@@ -1,5 +1,4 @@
-// script.js
-// Placeholder for future interactivity
+// Scripts JS
 
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelector(".btn.forum").addEventListener("click", () => {
@@ -16,3 +15,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
   console.log("Dark profile card loaded.");
 });
+
+// Fin del Script
