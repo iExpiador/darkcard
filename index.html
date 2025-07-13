@@ -40,9 +40,16 @@
   </div>
 
   <script src="script.js"></script>
-  <div class="entry">
+  <div class="entry entry-audio">
   <div class="custom_audio_wrapper">
     <audio src="https://dl.sndup.net/bhx5y/Sanctuary.mp3" controls></audio>
+  </div>
+  <div class="audio-albumart">
+    <div class="audio-albumart-img" style="background-image: url('https://i.imgur.com/QcH2xEJ.gif');"></div>
+  </div>
+  <div class="audio-info">
+    <div class="audinfo-track">Agora Hills</div>
+    <div class="audinfo-artist">Doja Cat</div>
   </div>
 </div>
   <script>
@@ -64,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
     errorIcon: "<i data-feather='x'></i>",
     hideInfoIfError: true,
     callAfterLoad: () => {
-      if (feather) feather.replace();
+      feather.replace();
     }
   }).create();
 });
