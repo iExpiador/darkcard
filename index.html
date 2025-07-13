@@ -36,15 +36,34 @@
       </div>
     </div>
   </div>
-   <!-- Reproductor minimalista (oculto) -->
-    <audio autoplay loop controls hidden>
-        <source src="assets/creep.mp3" type="audio/mpeg">
-        <!-- Si usas un enlace externo: -->
-        <!-- <source src="https://tu-enlace.com/cancion.mp3" type="audio/mpeg"> -->
+   <!-- Botón flotante -->
+    <button id="music-toggle">🔇</button>
+    
+    <!-- Reproductor oculto -->
+    <audio id="bg-music" loop>
+        <source src="tu-cancion.mp3" type="audio/mpeg">
     </audio>
 
-    <p style="font-size:12px; color:gray;">
-        🎵  ▶︎‖
-    </p>
+    <script>
+        const music = document.getElementById('bg-music');
+        const toggleBtn = document.getElementById('music-toggle');
+        let isPlaying = false;
+
+        // Intentar autoplay (puede fallar)
+        music.play().then(() => {
+            isPlaying = true;
+            toggleBtn.textContent = '🔊';
+        }).catch(() => {
+            isPlaying = false;
+            toggleBtn.textContent = '🔇';
+        });
+
+        // Control manual
+        toggleBtn.addEventListener('click', () => {
+            isPlaying ? music.pause() : music.play();
+            isPlaying = !isPlaying;
+            toggleBtn.textContent = isPlaying ? '🔊' : '🔇';
+        });
+    </script>
 </body>
 </html>
