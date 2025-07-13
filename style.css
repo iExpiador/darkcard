@@ -148,14 +148,68 @@ body {
 }
 
 #music-toggle {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: #000;
-            color: #fff;
-            border: none;
-            padding: 10px;
-            border-radius: 50%;
-            cursor: pointer;
-            z-index: 1000;
-        }
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background: #000;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1000;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s;
+    box-shadow: 
+        0 2px 5px rgba(0,0,0,0.2),
+        inset 0 0 0 1px rgba(255,255,255,0.1);
+    
+    /* Efecto de luz neón (inactivo) */
+    &:hover {
+        box-shadow: 
+            0 0 10px rgba(255,255,255,0.8),
+            inset 0 0 5px rgba(255,255,255,0.3);
+        transform: scale(1.05);
+    }
+    
+    /* Efecto al hacer clic */
+    &:active {
+        transform: scale(0.95);
+        background: #222;
+        animation: clickEffect 0.4s ease-out;
+    }
+    
+    /* Estado "playing" (usando :focus) */
+    &:focus {
+        outline: none;
+        animation: pulse 2s infinite;
+        box-shadow: 
+            0 0 15px rgba(0,255,255,0.7),
+            inset 0 0 10px rgba(0,255,255,0.3);
+    }
+}
+
+/* Animación de pulsación */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* Efecto de onda al hacer clic */
+@keyframes clickEffect {
+    0% {
+        box-shadow: 
+            0 0 0 0 rgba(255,255,255,0.4),
+            inset 0 0 5px rgba(255,255,255,0.3);
+    }
+    100% {
+        box-shadow: 
+            0 0 0 15px rgba(255,255,255,0),
+            inset 0 0 10px rgba(255,255,255,0);
+    }
+}
