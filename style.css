@@ -146,3 +146,103 @@ body {
     font-size: 0.9rem;
   }
 }
+/*-------MUSIC PLAYER BY GLENTHEMES-------*/
+:root {
+   --Music-Player-Vinyl:#fff;
+   --Vinyl-Icon-Size:17px;
+   --Vinyl-Spin-Speed:3.5s;
+   --Music-Controls:#fff;
+   --Music-Controls-Size:12px;
+   --Music-Title-Font-Size:11px;
+   --Music-Title-Color:#fff;
+}
+.glenjams-06 {
+   display:none;
+   position:fixed;
+   bottom:0;margin-bottom:30px;
+   left:0;margin-left:30px;
+   z-index:99;
+}
+
+.pasta {
+   display:flex;
+   align-items:center;
+}
+
+.vinyl-spin {
+   animation:recordspin var(--Vinyl-Spin-Speed) linear infinite;
+   -webkit-animation:recordspin var(--Vinyl-Spin-Speed) linear infinite;
+   -moz-animation:recordspin var(--Vinyl-Spin-Speed) linear infinite;
+   -o-animation:recordspin var(--Vinyl-Spin-Speed) linear infinite;
+}
+
+.vinyl-pause {
+   animation-play-state:paused;
+   -webkit-animation-play-state:paused;
+   -moz-animation-play-state:paused;
+   -o-animation-play-state:paused;
+}
+
+@-webkit-keyframes recordspin {
+   from {
+       -webkit-transform:rotate(0deg);
+       -o-transform:rotate(0deg);
+       transform:rotate(0deg);
+   }
+   to {
+       -webkit-transform:rotate(360deg);
+       -o-transform:rotate(360deg);
+       transform:rotate(360deg);
+   }
+}
+
+@keyframes recordspin {
+   from {
+       -ms-transform:rotate(0deg);
+       -moz-transform:rotate(0deg);
+       -webkit-transform:rotate(0deg);
+       -o-transform:rotate(0deg);
+       transform:rotate(0deg);
+   }
+   to {
+       -ms-transform:rotate(360deg);
+       -moz-transform:rotate(360deg);
+       -webkit-transform:rotate(360deg);
+       -o-transform:rotate(360deg);
+       transform:rotate(360deg);
+   }
+}
+
+.vinyl, .vinyl svg {
+   width:var(--Vinyl-Icon-Size);
+   height:var(--Vinyl-Icon-Size);
+   line-height:0;
+}
+
+.music-controls {
+   margin-left:10px;
+   width:var(--Music-Controls-Size);
+   overflow:hidden;
+   cursor:pointer;
+}
+
+.music-controls svg {
+   display:block;
+   width:var(--Music-Controls-Size);
+   height:var(--Music-Controls-Size);
+   color:var(--Music-Controls);
+   stroke-width:1.5px;
+   line-height:0;
+}
+
+.pausee {display:none;}
+
+.beff {display:none;}
+.aff {display:block;}
+
+.music-title {
+   margin-left:8px;
+   font-family:work sans;
+   font-size:var(--Music-Title-Font-Size);
+   color:var(--Music-Title-Color);
+}
