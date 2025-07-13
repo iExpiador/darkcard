@@ -5,6 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ryze Xatspace</title>
   <link rel="stylesheet" href="style.css" />
+  <!-- customaudio.js -->
+    <!-- credit to annasthms -->
+    <!-- https://annasthms.tumblr.com/more/js/customaudio/new -->
+    <script src="https://cdn.jsdelivr.net/gh/annasthms/customaudio@latest/customaudio.min.js"></script>
+    <script>
+        //--------- audioplayer
+        $(document).ready(function() {
+            customAudio({
+                post: ".entry",
+                wrappers: {
+                    audio: ".custom_audio_wrapper",
+                    buttons: ".custom_audio_buttons",
+                    duration: ".custom_audio_duration",
+                    timeCurrent: ".custom_audio_current_time",
+                    timeLeft: ".custom_audio_time_left",
+                    seekbar: ".custom_audio_seekbar"
+                },
+                default: false,
+                pauseAll: true,
+                playButton: "<i data-feather='play'></i>",
+                pauseButton: "<i data-feather='pause'></i>",
+                errorIcon: "<i data-feather='x'></i>",
+                hideInfoIfError: true,
+                callAfterLoad: () => {
+                    feather.replace();
+                }
+            }).create();
+        });
+    </script>
 </head>
 <body>
   <div class="container">
